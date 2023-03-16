@@ -4,7 +4,7 @@ class Api::V1::RatesController < ApplicationController
   def index
     @rates = Fedex::Rates.get(credentials, quote_params)
     render json: @rates
-  rescue Fedex::Ws::ParserError => e
+  rescue Fedex::Ws::ParserError, ActionController::ParameterMissing => e
     render json: { error: e.message }, status: :unprocessable_entity
   rescue StandardError => e
     render json: { error: e.message }, status: :internal_server_error
