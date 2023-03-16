@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/anmacagno/fedex-ws.git
-  revision: 935382588cdf2a5f8c9553e2a4e36b5be9bc64e6
+  revision: 085792d06a6157afc3e2ea52bb6baa6dc630eafa
   specs:
     fedex-ws (0.1.0)
       activesupport (~> 7.0)
